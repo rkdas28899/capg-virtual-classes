@@ -66,7 +66,7 @@ public class TraineeManagementController {
 	public String deleteTrainee(@RequestParam("traineeId") int traineeId)
 	{
 		 traineeService.deleteTrainee(traineeId);
-	   	 return "traineeManagementPage";
+	   	 return "traineeManagement";
 	}
 	
 	@GetMapping("/retrieveAllTrainee")
@@ -85,13 +85,13 @@ public class TraineeManagementController {
 	public ModelAndView updateTrainee(@RequestParam int traineeId)
 	{	
 		  Trainee trainee=traineeService.getTraineeById(traineeId);
-		  return new ModelAndView("modify1","trainee",trainee); 
+		  return new ModelAndView("modifyParams","trainee",trainee); 
 	}
 	
 	@RequestMapping("/modifyParams")
 	public String updateTrainee1(@ModelAttribute Trainee trainee)
 	{
 	    	   traineeService.updateTrainee(trainee);
-	    	  return "traineeManagementPage"; 
+	    	  return "traineeManagement"; 
 	}
 }
