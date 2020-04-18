@@ -19,3 +19,5 @@ Excercise 7: StudentDetails - Assignment
 2)capg-movie-info
 
 3)capg-movie-rating
+
+4)capg-eureka-server
